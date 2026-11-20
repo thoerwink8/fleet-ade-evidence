@@ -1,31 +1,118 @@
 {
-  "warmFirstOpenMs": {
-    "firstRowMs": 626,
-    "liveMs": 2274
+  "note": "Sanitized manual WS frame summary from production server capture. Protocol envelope fields only.",
+  "subscriptionRequestId": "25",
+  "marks": [
+    {
+      "name": "t0",
+      "at": 0.0419000000001688
+    },
+    {
+      "name": "before_nav",
+      "at": 0.05239999999957945
+    },
+    {
+      "name": "after_nav",
+      "at": 66.39900000000034
+    },
+    {
+      "name": "board_settled",
+      "at": 4574.7438999999995
+    },
+    {
+      "name": "after_drawer_open",
+      "at": 4659.9823
+    },
+    {
+      "name": "after_drawer_close",
+      "at": 6221.644700000001
+    },
+    {
+      "name": "after_board_close",
+      "at": 7476.5196
+    },
+    {
+      "name": "done",
+      "at": 9680.0109
+    }
+  ],
+  "phases": {
+    "open_board": [
+      {
+        "at": "+0ms",
+        "dir": "send",
+        "kind": "Request",
+        "id": "25",
+        "tag": "fleetSummary.subscribe"
+      },
+      {
+        "at": "+24ms",
+        "dir": "recv",
+        "kind": "Chunk",
+        "requestId": "25"
+      },
+      {
+        "at": "+24ms",
+        "dir": "send",
+        "kind": "Ack",
+        "requestId": "25"
+      }
+    ],
+    "drawer_open_to_close": {
+      "fleetFrameCount": 0,
+      "frames": []
+    },
+    "close_board": [
+      {
+        "at": "+7581ms",
+        "dir": "send",
+        "kind": "Interrupt",
+        "requestId": "25"
+      },
+      {
+        "at": "+7605ms",
+        "dir": "recv",
+        "kind": "Exit",
+        "requestId": "25"
+      }
+    ]
   },
-  "finalPath": "/9a0be60e-803c-49dc-81e4-7919567b782c/thread%3Aproject%3A50ee2315-3e56-4214-98ca-d90ba1e4ae6a%3Ae19060dc-6f9c-4588-a1e2-6bc155ef8663",
-  "drawerFrameCount": 7,
-  "drawerFleetFrameCount": 0,
-  "fleetFrames": [
+  "checks": {
+    "subscribeSent": true,
+    "zeroFleetFramesDuringDrawer": true,
+    "interruptSentOnClose": true,
+    "exitReceivedOnClose": true
+  },
+  "allFleetFrames": [
     {
-      "phase": "open",
-      "dir": "sent",
-      "p": "{\"_tag\":\"Request\",\"id\":21,\"tag\":\"fleetSummary.subscribe\",\"payload\":{},\"traceId\":\"f5b75de4bbb0808b5b6fcb5f650f4c37\",\"spanId\":\"19de168bb0ec1d98\",\"sampled\":true,\"headers\":[]}"
+      "at": "+0ms",
+      "dir": "send",
+      "kind": "Request",
+      "id": "25",
+      "tag": "fleetSummary.subscribe"
     },
     {
-      "phase": "close_drawer",
+      "at": "+24ms",
       "dir": "recv",
-      "p": "{\"_tag\":\"Exit\",\"requestId\":22,\"exit\":{\"_tag\":\"Success\",\"value\":null}}"
+      "kind": "Chunk",
+      "requestId": "25"
     },
     {
-      "phase": "close_board",
-      "dir": "sent",
-      "p": "{\"_tag\":\"Interrupt\",\"requestId\":21}"
+      "at": "+24ms",
+      "dir": "send",
+      "kind": "Ack",
+      "requestId": "25"
     },
     {
-      "phase": "close_board",
+      "at": "+7581ms",
+      "dir": "send",
+      "kind": "Interrupt",
+      "requestId": "25"
+    },
+    {
+      "at": "+7605ms",
       "dir": "recv",
-      "p": "{\"_tag\":\"Exit\",\"requestId\":21,\"exit\":{\"_tag\":\"Failure\",\"cause\":[{\"_tag\":\"Interrupt\",\"fiberId\":9138}]}}"
+      "kind": "Exit",
+      "requestId": "25"
     }
   ]
 }
