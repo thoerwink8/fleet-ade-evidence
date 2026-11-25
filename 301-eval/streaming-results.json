@@ -1,0 +1,35 @@
+{
+  "zoom": {
+    "metricsDelta": {
+      "LayoutCount": 23,
+      "RecalcStyleCount": 141,
+      "LayoutDuration": 0.0096,
+      "RecalcStyleDuration": 0.0612,
+      "ScriptDuration": 1.0067,
+      "TaskDuration": 1.2186
+    },
+    "longTasks": {
+      "error": null,
+      "count": 18,
+      "totalDuration": 1761,
+      "maxDuration": 224
+    }
+  },
+  "font": {
+    "metricsDelta": {
+      "LayoutCount": 27,
+      "RecalcStyleCount": 141,
+      "LayoutDuration": 0.0104,
+      "RecalcStyleDuration": 0.0584,
+      "ScriptDuration": 1.0339,
+      "TaskDuration": 1.2381
+    },
+    "longTasks": {
+      "error": null,
+      "count": 17,
+      "totalDuration": 1738,
+      "maxDuration": 219
+    }
+  },
+  "notes": "Captured once in the live dev client for identical shortened replay turns at 1440x900, fontScale large. Chromium Performance.getMetrics returns interval counters since the prior getMetrics call, so these deltas are stream intervals minus a short idle baseline. CDP durations are seconds; longtask values are milliseconds. The numbers compare zoom and font under the same workload; they are not total-turn CPU cost."
+}
